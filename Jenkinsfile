@@ -11,7 +11,7 @@ pipeline {
                     echo "PATH = ${PATH}"
                     echo "M2_HOME = ${M2_HOME}"
                 '''
-                   }
+                   
             }
         }
 
@@ -29,7 +29,7 @@ pipeline {
                     "ecr:us-east-2.amazonaws.com:ecr_creds"){
                         image = docker.build("precision/monitoring:${env.BUILD_ID}")
                         myImage.push('${env.BUILD_ID}')
-                    )
+                    }
                     
                 }
             }
