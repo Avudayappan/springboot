@@ -4,3 +4,5 @@ ADD ./run.sh /run.sh
 RUN chmod a+x /run.sh
 EXPOSE 8080:8080
 CMD /run.sh
+RUN mkdir -p /usr/share/maven
+RUN chmod 777 /usr/share/maven
